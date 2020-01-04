@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  overflow: scroll;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Blinker", serif;
+  color: #111111;
+  letter-spacing: 1px;
+  position: relative;
+}
+$mainBlue: #2F5572;
+.large-hero {
+  h2 {
+    color: $mainBlue;
+  }
+}
