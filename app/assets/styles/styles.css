@@ -1,22 +1,21 @@
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  overflow: scroll;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-body {
-  font-family: "Blinker", serif;
-  color: #111111;
-  letter-spacing: 1px;
-  position: relative;
-}
-$mainBlue: #2F5572;
-.large-hero {
-  h2 {
-    color: $mainBlue;
-  }
-}
+
+/* BASE */
+
+@import "normalize.css";
+@import "base/_variables";
+@import "base/_global";
+@import "base/_mixins";
+
+
+/* MODULES */
+@import "modules/_large-hero";
+@import "modules/_wrapper";
+@import "modules/_btn";
+@import "modules/_page-section";
+@import "modules/_headline";
+@import "modules/_row";
+@import "modules/_generic-content-container";
+
+
+
+

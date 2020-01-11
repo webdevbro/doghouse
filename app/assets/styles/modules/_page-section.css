@@ -1,0 +1,15 @@
+.page-section {
+  padding: 3rem 0px;
+  @mixin atSmall {
+    padding: 4rem 0px;
+  }
+  @mixin atSmallMedium {
+    padding: 6rem 0px;
+  }
+
+  &--blue {
+    background-color: $color__blue;
+    color: $color__white;
+  }
+
+}

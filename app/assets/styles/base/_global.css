@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  overflow: scroll;
 }
 *,
 *::before,
@@ -10,20 +9,14 @@ html {
 }
 body {
   font-family: "Blinker", serif;
-  color: #111111;
-  letter-spacing: 1px;
+  color: #333333;
   position: relative;
 }
 img {
   max-width: 100%;
   height: auto;
 }
-a:hover {
-  text-decoration: none;
-}
-p, ul, ol {
-  margin: 0px 0px 2rem 0px;
-}
-p, li {
-  line-height: 2rem;
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0px;
+  padding: 0px;
 }

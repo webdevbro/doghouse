@@ -1,0 +1,29 @@
+.generic-content-container {
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    line-height: 1.65;
+    font-weight: 300;
+    margin: 1.5rem 0px;
+    text-align: justify;
+    @mixin atSmall {
+      font-size: 1.6rem;
+    }
+    @mixin atSmallMedium {
+      font-size: 1.6rem;
+    }
+  }
+
+  p a {
+    font-weight: 400;
+    color: $color__lilac;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}

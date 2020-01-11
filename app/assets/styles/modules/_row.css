@@ -1,0 +1,16 @@
+.row {
+  display: block;
+  @mixin atSmall {
+    display: grid;
+    grid-template-columns: 37% 60%;
+    grid-gap: 30px;
+  }
+
+  &__b_margin-until-medium {
+    margin-bottom: 2rem;
+    @mixin atSmallMedium {
+      margin-bottom: 0px;
+    }
+  }
+
+} /* .row */

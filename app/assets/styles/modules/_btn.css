@@ -1,0 +1,33 @@
+.btn {
+  color: $color__white;
+  background-color: $color__blue;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  &:hover {
+    background-color: $color__blueDark;
+  }
+
+  &--large {
+    font-size: 1.8rem;
+    padding: 1.5rem 2.2rem;
+    margin-top: 1.5rem;
+    @mixin atSmall {
+      font-size: 2rem;
+    padding: 1.5rem 3rem;
+    }
+  }
+
+  &--yellow {
+    background-color: $color__yellow;
+    color: $color__blueDark;
+    &:hover {
+      background-color: $color__yellowDark;
+    }
+  }
+
+
+}
