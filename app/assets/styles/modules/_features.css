@@ -1,0 +1,45 @@
+.row2col {
+  margin: 3rem auto 0px;
+  padding: 0px 2rem;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  grid-column-gap: 80px;
+
+  @mixin atSmallMedium {
+    grid-template-columns: repeat(2, auto);
+    align-content: flex-start;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+  }
+
+  &__item {
+    max-width: 100%;
+    display: flex;
+    margin-bottom: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    @mixin atSmallMedium {
+      max-width: 350px;
+      margin-bottom: 0px;
+    }
+    img {
+      align-self: flex-start;
+      width: 160px;
+      height: auto;
+      @mixin atSmall {
+        width: 120px;
+      }
+      @mixin atSmallMedium {
+        width: 60%;
+      }
+    }
+    span {
+      margin-left: 20px;
+      @mixin atSmallMedium {
+        margin-left: 20px;
+      }
+    }
+  }
+
+}
