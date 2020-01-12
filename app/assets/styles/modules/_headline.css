@@ -14,6 +14,12 @@
   }
 
   &--small {
+    font-size: 2rem;
+    @mixin atSmall {
+      font-size: 2.6rem;
+    }
+  }
+  &--medium {
     font-size: 2.6rem;
     @mixin atSmall {
       font-size: 3.4rem;
@@ -22,6 +28,10 @@
 
   &--yellow {
     color: $color__yellowDark;
+  }
+
+  &--white {
+    color: $color__white;
   }
 
   &--narrow {

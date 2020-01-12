@@ -1,0 +1,35 @@
+.section-title {
+  font-size: 3rem;
+  font-weight: 200;
+  text-align: center;
+  strong {
+    font-weight: 500;
+  }
+  @mixin atSmall {
+    font-size: 4rem;
+  }
+  @mixin atSmallMedium {
+    font-size: 5rem;
+  }
+}
+
+.fancyTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @mixin atSmall {
+    margin-bottom: 6rem;
+  }
+  margin-bottom: 2rem;
+
+  img {
+    width: 40px;
+    @mixin atSmall {
+      width: 60px;
+    }
+
+    height: auto;
+    margin-right: 1rem;
+  }
+
+}
