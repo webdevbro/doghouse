@@ -8,6 +8,11 @@
     left: 0;
     width: 100%;
     text-align: center;
+    padding-top: 80px;
+    @mixin atSmall {
+      padding-top: 30px;
+    }
+
   }
   &__title {
     font-weight: 300;
