@@ -1,39 +1,103 @@
 .site-header {
   position: absolute;
   z-index: 2000;
-
   width: 100%;
   padding: 5px 0px;
-  @mixin atSmallMedium {
+  transition: all 0.3s ease-out;
+  @mixin atSmall {
+    display: block;
     background-color: rgba($color__blueDark, 0.3);
+  }
+  &__is-expanded {
+    background-color: rgba($color__blueDark, 0.5);
   }
 
   &__menu-icon {
     width: 20px;
     height: 20px;
-    background-color: $color__white;
     position: absolute;
-    top: 10px;
-    right: 10px;
-
-    @mixin atSmallMedium {
+    top: 20px;
+    right: 20px;
+    z-index: 3000;
+    transition: all 0.3s ease-in-out;
+    @mixin atSmall {
       display: none;
+    }
+
+    /* HAMBURGUER ICON */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 25px;
+      height: 2px;
+      background-color: $color__white;
+      transform: rotate(0deg);
+      transform-origin: 0 0;
+      transition: transform 0.3s ease-out;
+    }
+    &__middle {
+      position: absolute;
+      top: 9px;
+      left: 0px;
+      width: 25px;
+      height: 2px;
+      background-color: $color__white;
+      opacity: 1;
+      transform-origin: 0 50%;
+      transition: all 0.3s ease-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 25px;
+      height: 2px;
+      background-color: $color__white;
+      transform: rotate(0deg);
+      transform-origin: 0 100%;
+      transition: transform 0.3s ease-out;
     }
 
   }
 
+  &__menu-icon--close-x {
+
+    &::before {
+      transform: rotate(45deg) scaleX(1.09);
+    }
+    .site-header__menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    &::after {
+      transform: rotate(-45deg) scaleX(1.08);
+    }
+  }
+
   &__container {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100%;
+    display: block;
+    padding-bottom: 2rem;
+    @mixin atSmall {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+       padding-bottom: 0px;
+    }
+
   }
 
   &__container--logo {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: 1rem auto 0px;
 
-    @mixin atSmallMedium {
+    @mixin atSmall {
+      display: block;;
       width: 30%;
       position: absolute;
       top: 0px;
@@ -43,7 +107,7 @@
       width: 170px;
       background-color: rgba($color__blueDark, 0.5);
       padding: 1.2rem 2rem;
-      @mixin atSmallMedium {
+      @mixin atSmall {
         width: 150px;
         background-color: rgba($color__blueDark, 0.5);
         padding: 1.2rem 2rem;
@@ -53,36 +117,65 @@
   }
 
   &__container--nav {
-    padding-right: 3rem;
-    display: none;
-    @mixin atSmallMedium{
+    opacity: 0;
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+    position: relative;
+    z-index: -10;
+    @mixin atSmall {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
       display: block;
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: 1;
     }
+    @mixin atSmallMedium {
+      padding-right: 3rem;
+    }
+    &--is-visible {
+      opacity: 1;
+      z-index: 1;
+      transform: scale(1);
+      width: 100%;
+      padding-top: 2rem;
+    }
 
     ul {
       margin: 0px;
       padding: 0px;
+      display: block;
       list-style: none;
-      display: flex;
-      justify-content: flex-end;
+      @mixin atSmall {
+        display: flex;
+        justify-content: flex-end;
+      }
+
       li {
         padding: 10px;
-        transition: all 0.1s ease-in;
+        transition: all 0.2s ease-out;
+        border-bottom: 1px solid $color__whiteGrey;
+        text-align: center;
+        z-index: 4000;
+        @mixin atSmall {
+          background-color: transparent;
+          border-bottom: none;
+        }
         a {
           font-size: 1.5rem;
           text-decoration: none;
           color: $color__white;
           transition: all 0.2s ease-in;
         }
-        &:hover {
+        &:hover,
+        &:focus {
           cursor: pointer;
           background-color: rgba($color__blueDark, 0.3);
           border-radius: 2px;
         }
-        &:hover a {
+        &:hover a,
+        &:focus a {
           color: $color__yellowDark;
         }
       }
