@@ -5,8 +5,14 @@
   padding: 5px 0px;
   transition: all 0.3s ease-out;
   @mixin atSmall {
+    position: fixed;
     display: block;
     background-color: rgba($color__blueDark, 0.3);
+
+    &--dark {
+      background-color: rgba($color__blueDark, .85);
+    }
+
   }
   &__is-expanded {
     background-color: rgba($color__blueDark, 0.5);
@@ -101,6 +107,16 @@
       width: 30%;
       position: absolute;
       top: 0px;
+      transform: scale(1) translateY(0px);
+      transform-origin: left center;
+      transition: all 0.2s ease-in-out;
+      z-index: 7000;
+      .site-header--dark & {
+        margin: 0px;
+        transform: scale(0.70) translateY(-16px);
+        transform-origin: left center;
+        transition: all 0.3s ease-in-out;
+      }
     }
 
     img {
@@ -122,6 +138,7 @@
     transition: all 0.3s ease-out;
     position: relative;
     z-index: -10;
+
     @mixin atSmall {
       opacity: 1;
       z-index: 1;
@@ -167,6 +184,13 @@
           text-decoration: none;
           color: $color__white;
           transition: all 0.2s ease-in;
+          @mixin atSmall {
+
+            &.is-current-link {
+              color: $color__yellowDark;
+            }
+
+          }
         }
         &:hover,
         &:focus {
