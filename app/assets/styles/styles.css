@@ -1,11 +1,9 @@
-
 /* BASE */
 
 @import "normalize.css";
 @import "base/_variables";
 @import "base/_global";
 @import "base/_mixins";
-
 
 /* MODULES */
 @import "modules/_large-hero";
@@ -19,7 +17,5 @@
 @import "modules/_features";
 @import "modules/_site-header";
 @import "modules/_reveal-item";
-
-
-
-
+@import "modules/_modal";
+@import "modules/_social-icons";

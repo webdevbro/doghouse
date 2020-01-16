@@ -8,6 +8,10 @@
     max-width: 976px;
   }
 
+  &--narrow {
+    max-width: 640px;
+  }
+
   .wrapper {
     padding-left: 0px;
     padding-right: 0px;
@@ -18,7 +22,5 @@
     @mixin atSmallMedium {
       margin-bottom: 4rem;
     }
-
   }
-
 }

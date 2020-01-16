@@ -1,0 +1,50 @@
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.25);
+  transition: all 0.3s ease-out;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.94);
+  z-index: 11000;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+
+  &--is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  &__inner {
+    flex: 1;
+    margin: auto;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 4rem;
+    font-weight: 200;
+    transform: scaleX(1.2);
+    transform-origin: 100% 0;
+    color: $color__blue;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: $color__yellowDark;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 1.6;
+  }
+}

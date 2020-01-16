@@ -11,6 +11,11 @@
   @mixin atSmallMedium {
     font-size: 5rem;
   }
+
+  &--less-margin {
+    margin-bottom: 2rem;
+    margin-top: 0px;
+  }
 }
 
 .fancyTitle {
@@ -31,5 +36,4 @@
     height: auto;
     margin-right: 1rem;
   }
-
 }
