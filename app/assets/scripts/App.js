@@ -1,4 +1,5 @@
 import "../styles/styles.css";
+import "lazysizes";
 import Person from "./modules/Person";
 import MobileMenu from "./modules/MobileMenu";
 import RevealOnScroll from "./modules/RevealOnScroll";
@@ -8,7 +9,7 @@ import StickyHeader from "./modules/StickyHeader";
 new StickyHeader();
 new MobileMenu();
 new RevealOnScroll(document.querySelectorAll(".featureItem"), 75);
-new RevealOnScroll(document.querySelectorAll(".testimonial"), 85);
+// new RevealOnScroll(document.querySelectorAll(".testimonial"), 85);
 let modal;
 
 document.querySelectorAll(".open-modal").forEach(element => {
