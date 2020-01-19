@@ -12,6 +12,7 @@
 node_modules/
 wp-admin/
 wp-includes/
+docs/
 
 .tmp/
 .env
